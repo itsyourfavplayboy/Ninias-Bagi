@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Chajma quizi">
+<meta name="author" content="Levana">
+<title>Chemistry Quiz — Teacher vs Student</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="game-card" role="application">
+<div class="left">
+<header class="game-header">
+<div class="avatar"><img id="teacherImg" src="teacher.jpg" alt="Teacher"></div>
+<div>
+<h1>Teacher's Chemistry Quiz</h1>
+<p class="subtitle">Teacher-Student RolePlay. 30 Kitxva — 60s titoze sapasuxod. random kitxvebi mova.</p>
+</div>
+</header>
+
+
+<section class="question-area" aria-live="polite">
+<div class="qtop"><span class="qnum" id="qNumber">Question 1 / 30</span> <span class="muted tiny" id="qTopic">General</span></div>
+<div class="question" id="questionText">Loading...</div>
+
+
+<div class="choices" id="choices"></div>
+
+
+<div class="controls">
+<button id="submitBtn" class="btn">Submit Answer</button>
+<button id="skipBtn" class="btn ghost">Skip</button>
+<div style="margin-left:auto" class="muted tiny" id="feedback">Time left: <span id="timeLeft">60s</span></div>
+</div>
+</section>
+
+
+<div style="margin-top:20px;display:flex;gap:12px;align-items:center;justify-content:space-between">
+<div class="muted tiny">warmate-be-bii pupsik</div>
+<div>
+<button id="restart" class="btn ghost">Tavidan</button>
+</div>
+</div>
+</div>
+
+
+<aside class="right">
+<div class="classroom" id="classroomPreview">
+<img id="classroomImg" src="classroom.jpg" alt="Classroom photo">
+</div>
+
+
+<div class="timer-wrap">
+<div class="timer-label">Question timer</div>
+<div class="progress" aria-hidden="true"><div id="timerBar" class="bar" style="width:100%"></div></div>
+<div class="scorebox"><div>Score: <strong id="score">0</strong></div><div class="muted tiny">Question <span id="qIndex">1</span>/30</div></div>
+</div>
+</aside>
+</div>
+
+
+<template id="resultTemplate">
+<div class="results">
+<div class="muted tiny">Quiz complete</div>
+<div class="bigscore" id="finalScore">0 / 30</div>
+<div class="muted">Kai gogoxar, axla chamigde shedegi mainteresebs. </div>
+</div>
+</template>
+
+
+<script src="script.js"></script>
+</body>
+</html>
